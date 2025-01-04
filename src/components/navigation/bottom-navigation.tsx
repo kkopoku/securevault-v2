@@ -5,11 +5,13 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BsGithub, BsLinkedin, BsTwitterX } from 'react-icons/bs'
 import { RxLightningBolt } from 'react-icons/rx'
+import { GiCoffeeCup } from 'react-icons/gi'
 
 const navItems = [
   { icon: BsGithub, label: 'GitHub', href: 'https://github.com/kkopoku' },
   { icon: BsTwitterX, label: 'Twitter', href: 'https://twitter.com/kk_opoku' },
-  { icon: BsLinkedin, label: 'Buy me a coffee', href: 'https://linkedin.com/in/k0ranteng' },
+  { icon: BsLinkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/k0ranteng' },
+  { icon: GiCoffeeCup, label: 'Buy me a coffee', href: 'https://buymeacoffee.com/kkopoku' },
 ]
 
 export function BottomNavigation() {
