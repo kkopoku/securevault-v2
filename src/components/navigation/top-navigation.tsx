@@ -11,22 +11,22 @@ export function TopNavigation() {
 
   return (
     <motion.nav
-      className="py-2 px-6 flex justify-between items-center border-b-[0.5px] border-slate-300 shadow-md"
+      className="py-4 px-6 flex justify-between items-center border-b border-gray-400"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Link href="/" className="flex items-center space-x-2">
+      <Link href="/" className="flex items-center space-x-1">
         <motion.div
-          className="w-8 h-8 rounded-lg bg-purple-600 text-white text-lg font-bold flex items-center justify-center"
+          className="w-7 h-7 rounded-lg bg-purple-600 text-white text-base font-bold flex items-center justify-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           SV
         </motion.div>
-        <span className="text-xl font-semibold text-gray-900">SecureVault</span>
+        <span className="text-sm font-semibold text-gray-900">SecureVault</span>
       </Link>
-      <div className="hidden md:flex space-x-6">
+      <div className="hidden md:flex space-x-6 text-sm font-medium">
         <Link href="/" className="text-black hover:text-purple-600 transition-colors">
           Features
         </Link>

@@ -35,7 +35,7 @@ export function TrustBadges() {
             transition={{ delay: 0.1 * index, duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow duration-300"
+            className="bg-white rounded-xl border p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow duration-300"
           >
             <motion.div
               initial={{ rotate: 0 }}

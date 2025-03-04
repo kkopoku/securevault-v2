@@ -42,7 +42,7 @@ export function BottomNavigation() {
       initial={{ y: 100, opacity: 0 }}
       animate={isVisible ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-4 px-6 z-50"
+      className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-400 py-4 px-6 z-50"
     >
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         <motion.p className="text-gray-600">

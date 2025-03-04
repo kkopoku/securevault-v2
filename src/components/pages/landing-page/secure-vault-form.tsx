@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Shield, Clock, Eye, Mail, Lock, KeyRound, Maximize2 } from 'lucide-react'
+import { Shield, Clock, Eye, Mail, Lock, KeyRound, Maximize2, EyeClosed, EyeIcon } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
@@ -23,6 +23,7 @@ export function SecureVaultForm() {
   const [loading, setLoading] = useState(false)
   const [linkGenerated, setLinkGenerated] = useState("")
   const [isExpandModalOpen, setIsExpandModalOpen] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
 
   const API = process.env.NEXT_PUBLIC_API_URL
 
@@ -99,12 +100,11 @@ export function SecureVaultForm() {
       className="flex items-center justify-center px-4"
     >
       <Toaster />
-      <Card className="w-full max-w-6xl shadow-lg">
+      <Card className="w-full max-w-6xl shadow-lg border-gray-300">
 
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-gray-900">
-            <Shield className="w-5 h-5 text-purple-600" />
-            Create Secure Message
+            Enter Secure Message
           </CardTitle>
 
           <CardDescription className="text-gray-500">
@@ -153,14 +153,16 @@ export function SecureVaultForm() {
                 <div className="relative">
                   <Input
                     id="passphrase"
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     placeholder="Add an extra layer of security"
                     className="pr-10"
                     value={passphrase}
                     onChange={(e) => setPassphrase(e.target.value)}
                     disabled={linkGenerated.length > 0}
                   />
-                  <Lock className="absolute right-3 top-2.5 h-4 w-4 text-gray-400" />
+                  <button onClick={()=>setShowPassword((current)=>!current)}>
+                    {showPassword ? <EyeClosed className="absolute right-3 top-2.5 h-4 w-4 text-gray-400" /> : <EyeIcon className="absolute right-3 top-2.5 h-4 w-4 text-gray-400" />}
+                  </button>
                 </div>
               </div>
 
