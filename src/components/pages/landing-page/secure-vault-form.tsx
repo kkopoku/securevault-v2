@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Shield, Clock, Eye, Mail, Lock, KeyRound, Maximize2, EyeClosed, EyeIcon } from 'lucide-react'
+import { Clock, Eye, Mail, KeyRound, Maximize2, EyeClosed, EyeIcon } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
